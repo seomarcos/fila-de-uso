@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fila para o Banheiro</title>
+    <style>
+        /* Adicione seu CSS aqui */
+    </style>
+</head>
+<body>
+    <h1>Fila para o Banheiro</h1>
+
+    <h2>Sessão Atual</h2>
+    <div id="sessaoAtual"></div>
+
+    <h2>Fila</h2>
+    <ul id="fila"></ul>
+
+    <h2>Entrar na Fila</h2>
+    <form id="formFila">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" required>
+
+        <label for="tempo">Tempo Estimado (minutos):</label>
+        <input type="number" id="tempo" required>
+
+        <button type="submit">Entrar na Fila</button>
+    </form>
+
+    <button id="btnComecar" disabled>Começar</button>
+    <button id="btnFinalizar" disabled>Finalizar Sessão</button>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
